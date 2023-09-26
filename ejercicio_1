@@ -1,0 +1,29 @@
+while True:
+    try:
+        Calculadora = int(input('''Ingrese la operacion que desee realizar
+                            \r1. Suma
+                            \r2. Resta
+                            \r3. Multiplicacion
+                            \r4. Division
+                            \r5. Salir
+                            \r: '''))
+        if Calculadora == 5:
+            break
+        x=float(input('Ingrese el primer valor que desea operar: '))
+        y=float(input('Ingrese el segundo valor que desea operar: '))
+
+        if Calculadora == 1:
+            print((lambda x,y: x+y)(x,y))
+        elif Calculadora == 2:
+            print((lambda x,y: x-y)(x,y))
+        elif Calculadora == 3:
+            print((lambda x,y: x*y)(x,y))
+        elif Calculadora == 4:
+            print((lambda x,y: x/y)(x,y))
+
+    except ValueError:
+        print('Ingrese valores numerico')
+        continue
+    except ZeroDivisionError:
+        print('La division por 0 no esa definida')
+        continue
